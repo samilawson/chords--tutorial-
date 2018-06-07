@@ -19,6 +19,7 @@ class App extends Component {
             <Header authenticated={this.state.authenticated} />
             <div className="main-content" style={{padding: "1em"}}>
               <div className="workspace">
+                <Route exact path="/login" component={Login}/>
                 <Route exact path="/songs" render={(props) => {
                   return (
                     <SongList songs={this.state.songs} />
